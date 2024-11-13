@@ -3,9 +3,8 @@ using namespace std;
 
 int main() {
     string str;
-    cin.ignore();
     getline(cin, str);
-    int n = 0, begin, end;
+    int n = 0, begin = -1, end = -1;
     for (int i=0; i<str.length(); i++) {
         if (str[i] != ' ') {
             begin = i;
@@ -18,7 +17,7 @@ int main() {
             break;
         }
     }
-    if (str == " ") {
+    if (begin == -1) {
         cout<<"0"<<endl;
     }
     else{
