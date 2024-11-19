@@ -4,11 +4,11 @@ using namespace std;
 
 bool visited[200];
 set<int> s[200];
-int count = 0;
+int countN = 0;
 
 void dfs(int n) {
     visited[n] = true;
-    count++;
+    countN++;
     int x;
     for (auto iter=s[n].begin(); iter!=s[n].end(); iter++) {
         x = *iter;
@@ -27,5 +27,5 @@ int main() {
         s[b].insert(a);
     }
     dfs(1);
-    cout<<count-1<<endl;
+    cout<<countN-1<<endl;
 }
